@@ -1,5 +1,8 @@
-div {
-    
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+div {   
     position: absolute;
     top: 50%;
     left: 50%;
