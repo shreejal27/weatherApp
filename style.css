@@ -3,10 +3,12 @@ body{
     font-family: 'Rubik', sans-serif;
      background-image: url('/images/night/sky.jpg');
      background-repeat: no-repeat;
-    /* background-position: center; */
+     background-color: black;
     color: white;
 }
+
 #card {   
+    padding: 30px 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -14,7 +16,34 @@ body{
     background-color: #ffffff10;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
  }
-#card.select-text{
-    user-select: none;
+
+input[type=text]{
+   height: 35px;
+   width: 300px;
+   border-radius: 10px;
+   font-size: 18px;
+   background-color: #ffffff10;
+   border: none;
+   font-family: inherit;
+   color: white;
 }
+button {
+    height: 45px;
+    width: 45px;
+    margin: 10px;
+    padding: 8px;
+    background: #ffffff10;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+ button:hover {
+    border: 1px solid white;
+    transition: 0.5s ease-in;
+  }
+  
