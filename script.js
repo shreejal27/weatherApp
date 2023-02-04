@@ -20,8 +20,6 @@ input.addEventListener("keypress", function(event) {
     }
   });
 
-
-
 function getValue(){
     var city = document.getElementById('city').value;
     const apiKey = "bd7474449235b2bf05180173b4c6fa51";
@@ -37,7 +35,6 @@ function getValue(){
         const humidity = data.main.humidity;
         const windspeed = data.wind.speed;
     
-        console.log(name,icon, description,temperature,humidity, windspeed);
         document.getElementById('temperature').innerHTML = "Weather in " + name;
         document.getElementById('title').innerHTML =  temperature + "°C";
         document.getElementById('icon').src = "http://openweathermap.org/img/wn/"+ icon+ ".png";
@@ -45,10 +42,8 @@ function getValue(){
         document.getElementById('humidity').innerHTML = "Humidity: " + humidity + "%";
         document.getElementById('wind').innerHTML = "Wind speed: " + windspeed + "km/hr";
         
-        
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" +name+ "')";
       })
       .catch(error => console.error(error));
-
 }
 
