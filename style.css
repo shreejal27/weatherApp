@@ -1,10 +1,12 @@
 body{
     margin: 0;
     font-family: 'Rubik', sans-serif;
-     background-image: url('/images/night/sky.jpg');
+     /* background-image: url('/images/cloudy.jpg'); */
+     background: #000;
+     background-size: cover;
      background-repeat: no-repeat;
-     background-color: black;
-    color: white;
+     background-position: center;
+     background-attachment: fixed;
 }
 
 #card {   
@@ -29,6 +31,10 @@ input[type=text]{
    font-family: inherit;
    color: white;
 }
+input::placeholder{
+  color: white;
+}
+
 button {
     height: 45px;
     width: 45px;
