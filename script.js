@@ -6,7 +6,7 @@ function getValue(){
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        const name = city;
+        const name = data.name;
         const icon = data.weather[0].icon;
         const description = data.weather[0].description;
         const temperature = data.main.temp;
@@ -15,10 +15,11 @@ function getValue(){
     
         console.log(name,icon, description,temperature,humidity, windspeed);
         document.getElementById('temperature').innerHTML = "Weather in " + name;
-        document.getElementById('title').innerHTML =  temperature;
-        document.getElementById('info').innerHTML =  icon + description;
-        document.getElementById('humidity').innerHTML = "Humidity: " + humidity;
-        document.getElementById('wind').innerHTML = "Wind speed: " + windspeed;
+        document.getElementById('title').innerHTML =  (temperature-273.15) + "C";
+        document.getElementById('icon').src = "http://openweathermap.org/img/wn/"+ icon+ ".png";
+        document.getElementById('description').innerHTML =  description;
+        document.getElementById('humidity').innerHTML = "Humidity: " + humidity + "%";
+        document.getElementById('wind').innerHTML = "Wind speed: " + windspeed + "km/hr";
  
       })
       .catch(error => console.error(error));
