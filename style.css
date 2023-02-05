@@ -28,10 +28,10 @@ input[type=text]{
    background-color: #ffffff10;
    border: none;
    font-family: inherit;
-   color: white;
+   color: black;
 }
 input::placeholder{
-  color: white;
+  color: black;
 }
 
 button {
