@@ -34,9 +34,11 @@ function getValue(){
         const temperature = data.main.temp;
         const humidity = data.main.humidity;
         const windspeed = data.wind.speed;
+        const feelslike = data.main.feels_like;
     
         document.getElementById('temperature').innerHTML = "Weather in " + name;
         document.getElementById('title').innerHTML =  temperature + "°C";
+        document.getElementById('subtitle').innerHTML = "Feels like "+ feelslike+ "°C" ;
         document.getElementById('icon').src = "http://openweathermap.org/img/wn/"+ icon+ ".png";
         document.getElementById('description').innerHTML =  description;
         document.getElementById('humidity').innerHTML = "Humidity: " + humidity + "%";
