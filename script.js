@@ -46,6 +46,10 @@ function getValue(){
         
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" +name+ "')";
       })
-      .catch(error => console.error(error));
+      .catch(error => 
+        {
+          // console.error(error);
+          alert("\n"+city +"'s weather stats are not available. \n\n Search for another city ");
+        });
 }
 
