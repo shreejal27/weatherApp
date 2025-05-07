@@ -1,15 +1,4 @@
-const backgroundImages = [
-  'cloudy.jpg',
-  'lighting.jpg',
-  'night.jpg',
-  'rain.jpg',
-  'sky.jpg',
-  'sunny.jpg',
-];
-
 document.addEventListener('DOMContentLoaded', function () {
-  //let random = Math.floor(Math.random() * (5)) + 1;
-  //document.body.style.backgroundImage = "url('./images/" + backgroundImages[random] + "')";
   let random = Math.floor(Math.random() * 1000);
   document.body.style.backgroundImage = "url('https://picsum.photos/1600/900?random=" + random + "')";
 });
