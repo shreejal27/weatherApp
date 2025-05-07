@@ -8,8 +8,10 @@ const backgroundImages = [
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-  let random = Math.floor(Math.random() * (5)) + 1;
-  document.body.style.backgroundImage = "url('./images/" + backgroundImages[random] + "')";
+  //let random = Math.floor(Math.random() * (5)) + 1;
+  //document.body.style.backgroundImage = "url('./images/" + backgroundImages[random] + "')";
+  let random = Math.floor(Math.random() * 1000);
+  document.body.style.backgroundImage = "url('https://picsum.photos/1600/900?random=" + random + "')";
 });
 
 var input = document.getElementById("city");
@@ -36,17 +38,25 @@ function getValue() {
       const windspeed = data.wind.speed;
       const feelslike = data.main.feels_like;
 
-      document.getElementById('temperature').innerHTML = "Weather in " + name;
-      document.getElementById('title').innerHTML = temperature + "°C";
-      document.getElementById('subtitle').innerHTML = "Feels like " + feelslike + "°C";
-      document.getElementById('icon').src = "http://openweathermap.org/img/wn/" + icon + ".png";
-      document.getElementById('description').innerHTML = description;
-      document.getElementById('humidity').innerHTML = "Humidity: " + humidity + "%";
-      document.getElementById('wind').innerHTML = "Wind speed: " + windspeed + "km/hr";
-
       const randomizer = Math.floor(Math.random() * 1000);
-document.body.style.backgroundImage = "url('https://picsum.photos/1600/900?random=" + randomizer + "')";
+
+      const backgroundImage = new Image();
+      backgroundImage.src = "https://picsum.photos/1600/900?random=" + randomizer;
       //document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" +name+ "')";
+
+      backgroundImage.onload = function () {
+        document.body.style.backgroundImage = "url('" + backgroundImage.src + "')";
+        document.body.style.transition = "background-image 0.6s ease-in-out";
+
+        document.getElementById('temperature').innerHTML = "Weather in " + name;
+        document.getElementById('title').innerHTML = temperature + "°C";
+        document.getElementById('subtitle').innerHTML = "Feels like " + feelslike + "°C";
+        document.getElementById('icon').src = "http://openweathermap.org/img/wn/" + icon + ".png";
+        document.getElementById('description').innerHTML = description;
+        document.getElementById('humidity').innerHTML = "Humidity: " + humidity + "%";
+        document.getElementById('wind').innerHTML = "Wind speed: " + windspeed + "km/hr";
+      }
+
     })
     .catch(error => {
       // console.error(error);
