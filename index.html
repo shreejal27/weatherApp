@@ -1,35 +1,34 @@
 <html>
-  <head>
-    <title>Weather Application</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div id="card">
-      <form>
-        <input type="text" id="city" placeholder="Enter A City Name" autofocus required/>
-        <button type="button" id="button" onclick="getValue()">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-      <h1 id="temperature"></h1>
-      <h1 id="title"></h1>
-      <h3 id="subtitle"> </h3>
-      <img id="icon"></img> <span id="description"></span>
-      <p id="humidity"></p>
-      <p id="wind"></p>
 
-      
-    </div>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+<head>
+  <title>Weather Application</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="card">
+    <form>
+      <input type="text" id="city" placeholder="Enter A City Name" autofocus required />
+      <button type="button" id="button" onclick="getValue()">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+    <h1 id="temperature"></h1>
+    <h1 id="title"></h1>
+    <h3 id="subtitle"> </h3>
+    <img id="icon"></img> <span id="description"></span>
+    <p id="humidity"></p>
+    <p id="wind"></p>
+    <p id="sunrise"></p>
+    <p id="sunset"></p>
+
+
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>

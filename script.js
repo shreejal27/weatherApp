@@ -26,6 +26,19 @@ function getValue() {
       const humidity = data.main.humidity;
       const windspeed = data.wind.speed;
       const feelslike = data.main.feels_like;
+      const sunrise = data.sys.sunrise;
+      const sunset = data.sys.sunset;
+
+      const sunriseDate = new Date(sunrise * 1000);
+      const sunsetDate = new Date(sunset * 1000);
+
+      const options = {
+        timeZone: 'Asia/Kathmandu',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
 
       const randomizer = Math.floor(Math.random() * 1000);
 
@@ -44,6 +57,8 @@ function getValue() {
         document.getElementById('description').innerHTML = description;
         document.getElementById('humidity').innerHTML = "Humidity: " + humidity + "%";
         document.getElementById('wind').innerHTML = "Wind speed: " + windspeed + "km/hr";
+        document.getElementById('sunrise').innerHTML = "Sunrise: " + sunriseDate.toLocaleTimeString('en-US', options);
+        document.getElementById('sunset').innerHTML = "Sunset: " + sunsetDate.toLocaleTimeString('en-US', options);
       }
 
     })
