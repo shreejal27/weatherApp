@@ -1,63 +1,65 @@
-body{
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-     background: #000;
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     background-attachment: fixed;
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-#card {   
-    padding: 30px 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff10;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 30px;
- }
-
-input[type=text]{
-   height: 35px;
-   width: 300px;
-   border-radius: 10px;
-   font-size: 18px;
-   background-color: #ffffff10;
-   border: none;
-   font-family: inherit;
-   color: black;
+#card {
+  padding: 30px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff10;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
 }
-input::placeholder{
+
+input[type=text] {
+  height: 35px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #ffffff10;
+  border: none;
+  font-family: inherit;
+  color: black;
+  padding-left: 10px;
+}
+
+input::placeholder {
   color: black;
 }
 
 button {
-    height: 45px;
-    width: 45px;
-    margin: 10px;
-    padding: 8px;
-    background: #ffffff10;
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
- button:hover {
-    border: 1px solid white;
-    transition: 0.5s ease-in;
-  }
-  
-#icon{
- display: inline-block;
- vertical-align: middle;
- margin-right: 10px;
+  height: 45px;
+  width: 45px;
+  margin: 10px;
+  padding: 8px;
+  background: #ffffff10;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-#description{
+button:hover {
+  border: 1px solid white;
+  transition: 0.5s ease-in;
+}
+
+#icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#description {
   text-transform: capitalize;
 }
