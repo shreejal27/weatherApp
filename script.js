@@ -11,6 +11,9 @@ input.addEventListener("keypress", function (event) {
   }
 });
 
+document.getElementById('loader').style.display = 'block';
+document.getElementById('card').style.display = 'none';
+
 function getValue() {
   var city = document.getElementById('city').value;
   const apiKey = "bd7474449235b2bf05180173b4c6fa51";
@@ -19,6 +22,8 @@ function getValue() {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('weather-container').style.display = 'block';
       const name = data.name;
       const icon = data.weather[0].icon;
       const description = data.weather[0].description;
